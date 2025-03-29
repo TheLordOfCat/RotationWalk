@@ -37,3 +37,10 @@ def proces_point(xS, yS, next_level, r, boundry, x_points, y_points, angles_rad)
             y_points.append(y)
             next_level.append((x,y))
             
+def process_level(parent_level, levels, r, boundry, x_points, y_points, angles_rad):
+    next_level = []
+
+    for i in range(0, len(levels[parent_level])):
+        proces_point(levels[parent_level][i][0], levels[parent_level][i][1], next_level, r, boundry, x_points, y_points, angles_rad)
+    
+    levels.append(next_level)
