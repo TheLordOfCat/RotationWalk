@@ -54,6 +54,9 @@ def proces_point_dynamic(xS, yS, next_level, r, boundry, x_points, y_points, ang
     for a in angles_rad:
         x = math.cos(a)*r + xS
         y = math.sin(a)*r + yS
+
+        x = round(x,2)
+        y = round(y,2)
         
         if -1 * boundry <= x and x <= boundry and -1 * boundry <= y and y <= boundry:
             x_points.append(x)
