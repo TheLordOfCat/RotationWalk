@@ -7,15 +7,15 @@ import os
 
 ######### Arguments #########
 
-r = 2
-angle = 75 #in degrees <0,360>
+r = 20
+angle = 1 #in degrees <0,360>
 total_levels = 3  # >= 1
-boundry = 50
+boundry = 100
 folder_path = 'stable_colored'
-points_scaling = 5
+points_scaling = 3
 points_size = [6, 5, 4, 3, 2, 1, 0.5, 0.25, 0.125]
-figure_side_size = 10
-level_colors = ['ko', 'ro', 'bo', 'go']
+figure_side_size = 20
+level_colors = ['bo', 'ro', 'go', 'co', 'mo', 'yo', 'ko', 'bs', 'rs', 'gs', 'cs', 'ms', 'ys', 'ks']
 
 #############################
 step = 1
