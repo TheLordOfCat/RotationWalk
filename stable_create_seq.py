@@ -8,8 +8,8 @@ import os
 ######### Arguments #########
 
 r = 20
-angle = 1 #in degrees <0,360>
-total_levels = 3  # >= 1
+angle = 75 #in degrees <0,360>
+total_levels = 7  # >= 1
 boundry = 100
 folder_path = 'stable_colored'
 points_scaling = 3

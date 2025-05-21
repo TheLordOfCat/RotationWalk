@@ -8,7 +8,7 @@ import rotation_walk as rw
 
 r = 2
 angle = 75 #in degrees <0,360>
-total_levels = 2  # >= 1
+total_levels = 3  # >= 1
 boundry = 50
 points_scaling = 5
 points_size = [6, 5, 4, 3, 2, 1, 0.5, 0.25, 0.125]
