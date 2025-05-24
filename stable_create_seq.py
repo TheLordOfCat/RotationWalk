@@ -5,6 +5,9 @@ import math
 import rotation_walk as rw
 import os
 
+######## Description ########
+#Symulates rotation walk in stable coloring. 
+#Starts a the the first level, creates each level up to total_levels and saves them into dynamic_colored with a respective name.
 ######### Arguments #########
 
 r = 20

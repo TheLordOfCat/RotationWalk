@@ -6,6 +6,10 @@ import rotation_walk as rw
 import os
 from collections import Counter
 
+######## Description ########
+#Symulates rotation walk.
+#Stars a the the first level, creates each level up to total_levels.
+#Then assigns each point to a rings by distance to the (0, 0).
 ######### Arguments #########
 
 r = 10

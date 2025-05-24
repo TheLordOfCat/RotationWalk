@@ -5,7 +5,21 @@ import math
 import rotation_walk as rw
 import os
 
+######## Description ########
+#Iterates through each angles from 0 to 359. Finds number of rotations and assings them into groups.
+#Each group has its leader chosen.
+#############################
+
+step = 1
+
+def log_step(message):
+    global step
+    print(str(step) + ") " + message)
+    step += 1
+
 fig, ax = plt.subplots(figsize = (20,20))
+
+log_step("iterating through each angle")
 
 all_angles = []
 
@@ -26,6 +40,7 @@ for i in range(0, 360):
 # ax.set_yticks(np.arange(0, 370, 10))
 # plt.show()
 
+log_step("grouping angles and assigning leader")
 unice_angles = []
 for i in range(0, 360):
     found = False
@@ -41,7 +56,7 @@ for i in range(0, 360):
     else:
         unice_angles[ind] = (unice_angles[ind][0], unice_angles[ind][1] + 1, unice_angles[ind][2])
 
-    
+log_step("printing groups")
 unice_angles.sort()
 for i in range(0, len(unice_angles)):
     print(str(unice_angles[i][0]) + "," + str(unice_angles[i][1])+ "," + str(unice_angles[i][2]))

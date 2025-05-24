@@ -4,6 +4,9 @@ from shapely.geometry import *
 import math
 import rotation_walk as rw
 
+######## Description ########
+#Symulates rotation walk in stable coloring. 
+#Starts a the the first level, creates each level up to totat_levels. Then shows the total walk.
 ######### Arguments #########
 
 r = 2

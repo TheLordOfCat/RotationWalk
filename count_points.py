@@ -5,22 +5,38 @@ import math
 import rotation_walk as rw
 import os
 
+######## Description ########
+#Symulates rotation walk.
+#Starts a the the first level, creates each level up to total_levels and counts points.
+#Then displays points by level or total.
 ######### Arguments #########
 
 r = 1
 boundry = 2000000000
-angles = [45]
+angles = [75]
 angles_colors = ['b','r', 'g'] 
-total_levels = 100
+total_levels = 10
 figure_side_size = 10
 folder_path = "points_charts"
 
 #############################
 
+step = 1
+
+def log_step(message):
+    global step
+    print(str(step) + ") " + message)
+    step += 1
+
 points_level_created = []
 points_level_sum = []
 
+log_step("### simulating number of poinst ###")
+log_step("interating through angles")
 for a in angles:
+    log_step("processing angle " + str(a))
+
+    log_step("getting nubmer of rotations")
     angles_degree = rw.get_angles(a)
     angles_rad = rw.convert_degree_to_rad(angles_degree)
 
@@ -33,11 +49,13 @@ for a in angles:
 
     marked = {(0,0)}
 
+    log_step("iterating through levels")
     for i in range(1, total_levels+1):
         levels_x.append([])
         levels_y.append([])
         rw.process_level_stable(i-1, levels, r, boundry, levels_x[-1], levels_y[-1], angles_rad, marked)
     
+    log_step("summing points")
     sum = 0
     for i in range(0, len(levels)):
         sum += len(levels[i])
@@ -48,6 +66,7 @@ for a in angles:
     points_level_created.append(number_points)
     points_level_sum.append(sum_points)
 
+log_step("plotting number of points")
 fig, ax = plt.subplots(figsize = (figure_side_size, figure_side_size))
 
 display = input("What do you wish to display? \n 1) L - points by level \n 2) T - points total \n 3) LT or TL - points by level and total \n")
