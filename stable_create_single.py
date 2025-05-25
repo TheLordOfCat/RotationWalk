@@ -9,9 +9,9 @@ import rotation_walk as rw
 #Starts a the the first level, creates each level up to totat_levels. Then shows the total walk.
 ######### Arguments #########
 
-r = 2
-angle = 75 #in degrees <0,360>
-total_levels = 3  # >= 1
+r = 10
+angle = 45 #in degrees <0,360>
+total_levels = 2  # >= 1
 boundry = 50
 points_scaling = 5
 points_size = [6, 5, 4, 3, 2, 1, 0.5, 0.25, 0.125]

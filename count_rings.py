@@ -14,9 +14,9 @@ from collections import Counter
 
 r = 10
 boundry = 2000000000
-angles = [75]
+angles = [45]
 angles_colors = ['b','r', 'g'] 
-total_levels = 7
+total_levels = 4
 figure_side_size = 10
 folder_path = "points_charts"
 
@@ -75,11 +75,11 @@ for a in angles:
     rings_sizes = []
     rings_index = []
     for i in range(0, len(sorted_rings_list)):
-        # print(sorted_rings_list[i][1], end= " ")
+        print(sorted_rings_list[i][1], end= " ")
         rings_index.append(i)
         rings_sizes.append(sorted_rings_list[i][1])
     
-    ax.plot(rings_index, rings_sizes, 'ko', label=str(a) + " points by ring", markersize = 1)
+    # ax.plot(rings_index, rings_sizes, 'ko', label=str(a) + " points by ring", markersize = 1)
 
-    plt.show()
+    # plt.show()
         
